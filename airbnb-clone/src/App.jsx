@@ -12,15 +12,19 @@ function App() {
           <span className='font-bold'>airbnb </span>
           </a>
         </header>
-        <div className='gap-2 p-2'> Anywhere</div>
-        <div className='gap-2 p-2'> Any week</div>
-        <div className='p-2'>  Any guests</div>
-        <button>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-        </svg>
-
-        </button>
+        <div className="border flex border-gray-300 rounded-full">
+          <div className=' p-2'> Anywhere</div>
+          <div className="border border-l border-gray-300"></div>
+          <div className='p-2'> Any week</div>
+          <div className="border border-l border-gray-300"></div>
+          <div className='p-2'>  Any guests</div>
+          <div className="border border-l border-gray-300"></div>
+          <button className="g-2 p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+          </button>
+        </div>
 
       </div>
   )
