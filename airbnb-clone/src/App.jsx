@@ -3,7 +3,7 @@ import './App.css'
 import { Routes } from 'react-router-dom'
 import LoginPage from './pages/LoginPage'
 import IndexPage from './pages/IndexPage'
-import Layout from './layout'
+import Layout from './Layout'
 
 function App() {
   return (
