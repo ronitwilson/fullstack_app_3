@@ -6,8 +6,10 @@ export default function RegisterPage() {
         <div className="mb-64">
             <h1 className="text-4xl text-center mb-4">Register</h1>
             <form  className="max-w-md mx-auto"> 
+                <input type='text' placeholder='Name' />
                 <input type='text' placeholder='your@email.com' />
                 <input type='password' placeholder='password' />
+                <input type='Role' placeholder='admin' />
                 <button className="primary">Login</button>
                 <div className="text-center py-2">
                     Have an account? 
