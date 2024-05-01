@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import axios from 'axios'
 
 export default function LoginPage() {
     const [email, setEmail] = useState('');
@@ -7,6 +8,8 @@ export default function LoginPage() {
 
     function login(ev) {
         ev.preventDefault()
+        console.log('login', email, password)
+        axios.post('/login', {email, password})
     }
 
     return(
