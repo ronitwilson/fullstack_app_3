@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require('cors');
+const connectDB = require('./db/connect');
 
 const app = express()
 const port = 3001
@@ -29,3 +30,14 @@ app.post("/register", (req,res) => {
 const server = app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
   })
+
+  const start = async () => {
+    try {
+        await connectDB();
+        console.log('chat app connected to database');
+    } catch (error) {
+        console.log(error);
+    }
+  }
+
+  start();
