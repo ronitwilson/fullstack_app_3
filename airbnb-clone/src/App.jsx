@@ -7,9 +7,10 @@ import RegisterPage from './pages/RegisterPage'
 import Layout from './Layout'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://localhost:3001'
 
 function App() {
+  axios.defaults.baseURL = 'http://localhost:3001'
+  axios.defaults.withCredentials = true
   return (
     <Routes>
       <Route path='/'  element={<Layout />} > 
