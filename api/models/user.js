@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 
 const userSchema = new mongoose.Schema({
-    username: {
+    name: {
         type: String,
         required: [true, 'Please provide a username'],
         unique: true
@@ -21,7 +21,8 @@ const userSchema = new mongoose.Schema({
 },
 {timestamps: true});
 
-userSchema.methods.isPasswordValid = async (password) => {
+userSchema.methods.isPasswordValid = async function (password)  {
+    console.log("compare  ", password , this.password)
     isMatch = await bcrypt.compare(password, this.password)
     console.log("password match ", isMatch)
     return(isMatch)

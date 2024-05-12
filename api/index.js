@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require('cors');
 const connectDB = require('./db/connect');
+const register = require('./controller/register');
+const login = require('./controller/login');
 
 const app = express()
 const port = 3001
@@ -15,17 +17,9 @@ app.get("/", (req,res) => {
     res.send("Hello world")
 })
 
-app.post("/login", (req,res) => {
-    const {email, password} = req.body
-    console.log("login request received", email, password)
-    res.send("Login request received")
-})
+app.post("/login", login)
 
-app.post("/register", (req,res) => {
-    const {email, password, role, name} = req.body
-    console.log("login request received", email, password, role, name)
-    res.send("register request received")
-})
+app.post("/register", register)
 
 const server = app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
