@@ -10,11 +10,13 @@ const login = async (req, res) => {
         }else{
             console.log("Login failed")
             res.send("Login failed")
+            return res.status(400).json({msg: "Invalid credentials"})
         }
     }
     else{
         console.log("user not found")
         res.send("user not found")
+        return res.status(400).json({msg: "User not found"})
     }
 }
 

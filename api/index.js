@@ -3,6 +3,7 @@ const cors = require('cors');
 const connectDB = require('./db/connect');
 const register = require('./controller/register');
 const login = require('./controller/login');
+const morgan = require('morgan');
 
 const app = express()
 const port = 3001
@@ -12,6 +13,8 @@ app.use(cors({
     origin: 'http://127.0.0.1:5173',
     credentials: true
 }));
+
+app.use(morgan('dev'));
 
 app.get("/", (req,res) => {
     res.send("Hello world")
