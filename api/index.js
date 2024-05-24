@@ -4,6 +4,8 @@ const connectDB = require('./db/connect');
 const register = require('./controller/register');
 const login = require('./controller/login');
 const morgan = require('morgan');
+const profile = require('./controller/profile');
+const cookieParser = require('cookie-parser');
 
 const app = express()
 const port = 3001
@@ -19,6 +21,10 @@ app.use(morgan('dev'));
 app.get("/", (req,res) => {
     res.send("Hello world")
 })
+
+app.use(cookieParser())
+
+app.get("/profile", profile)
 
 app.post("/login", login)
 

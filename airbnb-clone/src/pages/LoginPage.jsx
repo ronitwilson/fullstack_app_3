@@ -13,7 +13,7 @@ export default function LoginPage() {
         const userInfo = await axios.post('/login', {email, password})
         console.log(userInfo.data.id)
         setId(userInfo.data.id)
-        alert('Login successfull')
+        // alert('Login successfull')
     }
 
     return(
