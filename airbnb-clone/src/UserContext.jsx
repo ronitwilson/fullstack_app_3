@@ -8,12 +8,13 @@ export function UserContextProvider({children}) {
     const [username, setUsername] = useState(null)
     const [id  , setId] = useState(null)  
     useEffect(() => {
-        console.log("called")
-         axios.get("/profile").then((response) => {
-        const {data} = response
-        setUsername(data.decoded.userName) 
-        setId(data.decoded.userId) 
-        })}
+        if(!username) {
+            axios.get("/profile").then((response) => {
+            const {data} = response
+            setUsername(data.decoded.userName) 
+            setId(data.decoded.userId) 
+            })}
+        }
          ,[])
 
     return (
