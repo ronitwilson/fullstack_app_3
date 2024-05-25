@@ -7,18 +7,20 @@ export const UserContext = createContext({});
 export function UserContextProvider({children}) {
     const [username, setUsername] = useState(null)
     const [id  , setId] = useState(null)  
+    const [ready  , setReady] = useState(false)
     useEffect(() => {
         if(!username) {
             axios.get("/profile").then((response) => {
             const {data} = response
             setUsername(data.decoded.userName) 
             setId(data.decoded.userId) 
+            setReady(true)
             })}
         }
          ,[])
 
     return (
-        <UserContext.Provider value={{username, setUsername, id, setId}}>
+        <UserContext.Provider value={{username, setUsername, id, setId, ready}}>
             {children}
         </UserContext.Provider>
     )
