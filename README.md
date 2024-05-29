@@ -26,3 +26,6 @@ https://www.youtube.com/watch?v=MpQbwtSiZ7E&t=136s&ab_channel=CodingWithDawid
 account page should look for user in UserContext
 React useState should have a setready methon 1:51
 if user not ready show loading
+
+# may 29
+implement dynamic clases

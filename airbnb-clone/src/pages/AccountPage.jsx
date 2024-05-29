@@ -22,13 +22,19 @@ export default function AccountPage() {
         )
     }
 
+    function linkClasses(type=null){
+        if((type === subpage) || (subpage === undefined && type === 'profile'))
+            return ("py-2 px-6 bg-red-500 text-white rounded-full")
+        return ("py-2 px-6")
+    }
+
 
     return (
         <div className=''>
             <nav className='w-full flex justify-center mt-8 gap-2'>
-                <Link className='py-2 px-6 bg-red-500 text-white rounded-full' to={'/account'}>My account </Link>
-                <Link className='py-2 px-6' to={'/account/bookings'}>My bookings </Link>
-                <Link className='py-2 px-6' to={'/account/places'}>My acoomodiations </Link> 
+                <Link className={linkClasses('profile')} to={'/account'}>My account </Link>
+                <Link className={linkClasses('bookings')} to={'/account/bookings'}>My bookings </Link>
+                <Link className={linkClasses('places')} to={'/account/places'}>My acoomodiations </Link> 
             </nav>
         </div>
     )
