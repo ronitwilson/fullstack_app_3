@@ -40,6 +40,11 @@ export default function AccountPage() {
                 <Link className={linkClasses('bookings')} to={'/account/bookings'}>My bookings </Link>
                 <Link className={linkClasses('places')} to={'/account/places'}>My acoomodiations </Link> 
             </nav>
+        {!!username && (
+            <div>
+                username is {username}
+            </div>
+        )}
         </div>
     )
 }
