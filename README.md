@@ -29,3 +29,7 @@ if user not ready show loading
 
 # may 29
 implement dynamic clases
+make subpage into profile from undefined
+
+add name and email id to the account page
+add a logout button and reset the cookie 
