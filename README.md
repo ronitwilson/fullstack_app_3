@@ -19,3 +19,10 @@ https://www.youtube.com/watch?v=MpQbwtSiZ7E&t=136s&ab_channel=CodingWithDawid
     * use cookie based authentication
     Note: in the post use the withCredentials: true in the post
     * Use usercontext 
+
+
+# to do may 25
+* if name don't redirect to login 
+account page should look for user in UserContext
+React useState should have a setready methon 1:51
+if user not ready show loading
