@@ -3,6 +3,7 @@ const cors = require('cors');
 const connectDB = require('./db/connect');
 const register = require('./controller/register');
 const login = require('./controller/login');
+const logout = require('./controller/logout');
 const morgan = require('morgan');
 const profile = require('./controller/profile');
 const cookieParser = require('cookie-parser');
@@ -27,6 +28,8 @@ app.use(cookieParser())
 app.get("/profile", profile)
 
 app.post("/login", login)
+
+app.post("/logout", logout)
 
 app.post("/register", register)
 
