@@ -4,7 +4,7 @@ import { Link, Navigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 
 export default function AccountPage() {
-    const{username, ready, email} = useContext(UserContext)
+    const{username, ready, email, setUsername, setReady} = useContext(UserContext)
     const[redirect, setRedirect] = useState(null)
     let {subpage} = useParams()
     console.log(subpage)
@@ -36,6 +36,8 @@ export default function AccountPage() {
     async function logout(){
         await axios.post('/logout')
         setRedirect('/login')
+        setUsername(null)
+        setReady(false)
         // logout function
     }
 

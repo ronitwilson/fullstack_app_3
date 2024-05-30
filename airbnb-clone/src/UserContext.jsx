@@ -22,7 +22,7 @@ export function UserContextProvider({children}) {
          ,[])
 
     return (
-        <UserContext.Provider value={{username, setUsername, id, setId, ready, email}}>
+        <UserContext.Provider value={{username, setUsername, id, setId, ready, setReady, email}}>
             {children}
         </UserContext.Provider>
     )
