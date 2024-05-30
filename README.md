@@ -33,3 +33,6 @@ make subpage into profile from undefined
 
 add name and email id to the account page
 add a logout button and reset the cookie 
+
+at time 2:16 need to create form to add new placeinfo
+need to create db model (skipped for now)
