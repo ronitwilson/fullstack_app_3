@@ -29,9 +29,14 @@ export default function AccountPage() {
     }
 
     function linkClasses(type=null){
-        if((type === subpage))
-            return ("py-2 px-6 bg-red-500 text-white rounded-full")
-        return ("py-2 px-6")
+        let classes = 'inline-flex py-2 px-6 gap-1 rounded-full'
+        if((type === subpage)) {
+            classes += ' bg-red-500 text-white '
+        }
+        else {
+            classes += 'bg-gray-200'
+        } 
+        return classes
     }
 
     async function logout(){

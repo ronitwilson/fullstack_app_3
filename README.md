@@ -37,3 +37,5 @@ add a logout button and reset the cookie
 at time 2:16 need to create form to add new placeinfo
 need to create db model (skipped for now)
 
+
+#some more stylings at 2:19
