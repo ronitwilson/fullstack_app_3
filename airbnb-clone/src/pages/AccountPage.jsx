@@ -8,7 +8,7 @@ export default function AccountPage() {
     const{username, ready, email, setUsername, setReady} = useContext(UserContext)
     const[redirect, setRedirect] = useState(null)
     let {subpage} = useParams()
-    console.log(subpage)
+    // console.log(subpage)
 
     if(subpage === undefined) {
         subpage = "profile"
@@ -29,9 +29,9 @@ export default function AccountPage() {
     }
 
     function linkClasses(type=null){
-        let classes = 'inline-flex py-2 px-6 gap-1 rounded-full'
+        let classes = 'inline-flex py-2 px-6 gap-3 rounded-full'
         if((type === subpage)) {
-            classes += ' bg-red-500 text-white '
+            classes += ' bg-red-500 text-white'
         }
         else {
             classes += 'bg-gray-200'
