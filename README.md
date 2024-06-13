@@ -39,3 +39,13 @@ need to create db model (skipped for now)
 
 
 #some more stylings at 2:19
+
+Add h2 for heading
+add p for paragraph
+
+new places form
+    input text PH title
+                  address
+          text    add image to link
+                <button> to upload from link
+    button     
