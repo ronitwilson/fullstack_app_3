@@ -35,6 +35,30 @@ export default function PlacesPage() {
                 <h2> Description </h2>
                 <p className="text-gray-500 text-sm">discription of the place</p>
                 <textarea></textarea>
+                <h2> Perks </h2>
+                <p className="text-gray-500 text-sm">select all possible perks</p>
+                <div className="grid grid-cols-4 md:grid-cols-4 gap-2">
+                        <label className="border p-4 items-center">
+                            <input type="checkbox"/>
+                            <span>&nbsp;Wifi</span>
+                        </label>
+                        <label className="border p-4 items-center">
+                            <input type="checkbox"/>
+                            <span>&nbsp;Free Parking spot</span>
+                        </label>
+                        <label className="border p-4 items-center">
+                            <input type="checkbox"/>
+                            <span>&nbsp;TV</span>
+                        </label>
+                        <label className="border p-4 items-center">
+                            <input type="checkbox"/>
+                            <span>&nbsp;Pets</span>
+                        </label>
+                        <label className="border p-4 items-center">
+                            <input type="checkbox"/>
+                            <span>&nbsp;Private entrance</span>
+                        </label>
+                    </div>
             </form>
         )}
         </div>
