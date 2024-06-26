@@ -3,6 +3,29 @@ import { Link, useParams } from "react-router-dom";
 export default function PlacesPage() {
     const {action} = useParams()
     // console.log('action', action)
+
+    function inputHeader(text){
+        return (
+            <h2 className="text-2xl mt-4">{text}</h2>
+        )
+    }
+
+    function inputDescription(text){
+        return (
+            <p className="text-gray-500 text-sm">{text}</p>
+        )
+    }
+
+    function preInput(header, description){
+        return(
+            <>
+            {inputHeader(header)}
+            {inputDescription(description)}
+            </>
+        )
+
+    }
+
     return (
         <div>
         {action !== 'new' && (
@@ -12,14 +35,11 @@ export default function PlacesPage() {
         )}
         {action === 'new' && (
             <form>
-                <h2 className="text-2xl mt-4"> Title </h2>
-                <p className="text-gray-500 text-sm">Title for your plance</p>
+                {preInput('Title', 'Title for your place')}
                 <input type='text' placeholder="title"></input>
-                <h2> Address </h2>
-                <p className="text-gray-500 text-sm">Address for your place</p>
+                {preInput('Address','Address for your place')}
                 <input type='text' placeholder="address"></input>
-                <h2> Photos </h2>
-                <p className="text-gray-500 text-sm">more the better</p>
+                {preInput('Photos','more the better')}
                 <div className="flex gap-2">
                     <input type='text' placeholder="add uning link"></input>
                     <button className="rounded-2xl px-4">Add&nbsp;phtoto</button>
@@ -32,8 +52,7 @@ export default function PlacesPage() {
                     &nbsp;upload
                 </button>
                 </div>
-                <h2> Description </h2>
-                <p className="text-gray-500 text-sm">discription of the place</p>
+                {preInput('Description','description of the place')}
                 <textarea></textarea>
                 <h2> Perks </h2>
                 <p className="text-gray-500 text-sm">select all possible perks</p>
